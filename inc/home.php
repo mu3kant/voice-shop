@@ -1,0 +1,168 @@
+<div style="max-width: 1200px; margin: 0 auto; padding: 15px; box-sizing: border-box;"><!-- Заголовок в оранжевых тонах -->
+<header style="text-align: center; padding: 30px 20px; background: linear-gradient(135deg, #ff9a6b 0%, #ffb88c 100%); border-radius: 10px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(255, 154, 107, 0.2);">
+<h1 style="color: #fff; font-size: clamp(1.8rem, 5vw, 2.5rem); margin-bottom: 15px; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">&laquo;Город Детства&raquo;: игрушки и творчество с любовью из России</h1>
+
+<p style="color: rgba(255,255,255,0.9); font-size: clamp(1rem, 2.5vw, 1.2rem); max-width: 800px; margin: 0 auto;">Детство должно быть наполнено радостью, открытиями и вдохновением. В &laquo;Городе Детства&raquo; мы собрали коллекцию игрушек и наборов для творчества, которые:</p>
+
+<ul style="list-style: none; padding: 0; margin-top: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; flex-direction: column; align-items: center;">
+	<li style="background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; font-weight: 500; font-size: clamp(0.9rem, 2vw, 1rem);">развивают важные навыки через игру</li>
+	<li style="background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; font-weight: 500; font-size: clamp(0.9rem, 2vw, 1rem);">пробуждают фантазию и любознательность</li>
+	<li style="background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; font-weight: 500; font-size: clamp(0.9rem, 2vw, 1rem);">дарят незабываемые моменты вместе с семьёй</li>
+</ul>
+</header>
+<!-- Разделы товаров -->
+
+<section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 40px;"><!-- Творчество без границ -->
+<div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;">
+<h2 style="color: #e67e22; border-bottom: 2px solid #e67e22; padding-bottom: 8px; font-size: 1.3rem;">1. Творчество без границ</h2>
+
+<p style="margin-bottom: 12px; font-style: italic; font-size: 0.95rem;">Пусть ребёнок попробует себя в разных видах искусства &mdash; это развивает усидчивость, мелкую моторику и воображение:</p>
+
+<ul style="padding-left: 16px; font-size: 0.9rem;">
+	<li><strong>Алмазные мозаики</strong> &mdash; создавайте яркие картины со стразами.</li>
+	<li><strong>Наборы &laquo;Сшей игрушку&raquo;</strong> &mdash; освойте основы шитья с готовыми выкройками и материалами.</li>
+	<li><strong>Лепка</strong> (глина, пластилин, полимерная глина) &mdash; дайте волю фантазии!</li>
+	<li><strong>Выжигание по дереву и выпиливание лобзиком</strong> &mdash; познакомьтесь с народными промыслами и инструментами.</li>
+	<li><strong>Изготовление свечей и мыла</strong> &mdash; безопасное творчество с натуральными компонентами.</li>
+</ul>
+</div>
+<!-- Остальные блоки товаров (Игры для всей семьи, Юный учёный, Волшебные сюжеты) --><!-- Здесь остаются аналогичные блоки с соответствующей стилистикой --></section>
+<!-- Как сделать заказ -->
+
+<section style="margin-bottom: 40px;">
+<h2 style="color: #2c3e50; text-align: center; margin-bottom: 25px; font-size: 1.8rem;">Как сделать заказ &mdash; просто и быстро</h2>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px;"><!-- Способ 1 -->
+<div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+<h3 style="color: #3498db; margin-top: 0; font-size: 1.3rem;">1. На сайте mini-city.ru</h3>
+
+<p style="font-size: 0.95rem;">Интернет‑магазин с удобной навигацией:</p>
+
+<ul style="padding-left: 16px; font-size: 0.9rem;">
+	<li>фильтры по возрасту, тематике и навыкам;</li>
+	<li>подробные описания и фото товаров;</li>
+	<li>быстрая корзина и безопасная оплата.</li>
+</ul>
+</div>
+<!-- Способ 2 с виджетом Яндекс Карт -->
+
+<div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+<h3 style="color: #2ecc71; margin-top: 0; font-size: 1.3rem;">2. В розничном магазине</h3>
+
+<p style="font-size: 0.95rem;">Приходите в гости, чтобы увидеть товары вживую и получить консультацию:</p>
+
+<p style="font-weight: 500; color: #e74c3c; font-size: 1rem;">г.&nbsp;Уфа, ул.&nbsp;Машиностроителей, д.&nbsp;21/1</p>
+<!-- Виджет Яндекс Карт -->
+
+<div style="position: relative; overflow: hidden; margin-top: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"><a href="https://yandex.ru/maps/org/gorod_detstva_mini_city/221304724646/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;z-index:10;">Город Детства - Mini-city</a> <a href="https://yandex.ru/maps/172/ufa/category/toys_and_games/184107250/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;z-index:10;">Детские игрушки и игры в Уфе</a> <a href="https://yandex.ru/maps/172/ufa/category/board_games/184107267/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;z-index:10;">Настольные и интеллектуальные игры в Уфе</a><iframe allowfullscreen="true" frameborder="0" height="300" src="https://yandex.ru/map-widget/v1/org/gorod_detstva_mini_city/221304724646/?ll=56.116031%2C54.810066&z=14" style="border: none; width: 100%; height: 300px;" width="100%"></iframe></div>
+</div>
+</div>
+<!-- Варианты покупки -->
+
+<div>
+<h3 style="color: #2c3e50; margin-bottom: 20px; font-size: 1.5rem;">Варианты покупки</h3>
+<!-- Стандартная покупка -->
+
+<div style="background: #f8f9fa; padding: 18px; border-radius: 8px; margin-bottom: 18px;">
+<h4 style="color: #27ae60; margin-top: 0; font-size: 1.3rem;">Стандартная покупка (если товар есть в наличии)</h4>
+
+<ul style="padding-left: 16px; font-size: 0.95rem;">
+	<li>полная оплата при оформлении заказа;</li>
+	<li>самовывоз или доставка;</li>
+	<li>получение в день оплаты или на следующий рабочий день.</li>
+</ul>
+</div>
+<!-- Предзаказ -->
+
+<div style="background: #f8f9fa; padding: 18px; border-radius: 8px;">
+<h4 style="color: #e67e22; margin-top: 0; font-size: 1.3rem;">Предзаказ (если товара нет в наличии)</h4>
+
+<ul style="padding-left: 16px; font-size: 0.95rem;">
+	<li>предоплата &mdash; 10&nbsp;% от суммы заказа;</li>
+	<li>срок доставки в магазин &mdash; 5&ndash;10&nbsp;дней (в отдельных случаях &mdash; до 30&nbsp;рабочих дней);</li>
+	<li>после уведомления о прибытии товара оплатите оставшиеся 90&nbsp;% и заберите заказ в течение 10&nbsp;дней.</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Соцсети и акции -->
+
+<section style="background: linear-gradient(135deg, #ff9a6b 0%, #ffb88c 100%); padding: 25px; border-radius: 10px; text-align: center; color: white; margin-bottom: 35px;">
+<h2 style="margin-top: 0; font-size: 1.7rem;">Будьте в курсе новостей и акций!</h2>
+
+<p style="font-size: clamp(1rem, 2.5vw, 1.1rem); margin-bottom: 18px;">Подписывайтесь на наше сообщество ВКонтакте &mdash; там вас ждут:</p>
+
+<ul style="list-style: none; padding: 0; display: flex; flex-direction: column; align-items: center; gap: 12px; margin-bottom: 20px;">
+	<li style="font-size: clamp(0.9rem, 2vw, 1rem);">анонсы новинок и эксклюзивные скидки</li>
+	<li style="font-size: clamp(0.9rem, 2vw, 1rem);">идеи для творчества и игр с детьми</li>
+	<li style="font-size: clamp(0.9rem, 2vw, 1rem);">розыгрыши призов и подарки для подписчиков</li>
+	<li style="font-size: clamp(0.9rem, 2vw, 1rem);">живое общение с другими родителями и обмен опытом</li>
+</ul>
+<a href="https://vk.com/mini_city_ru" onmouseout="this.style.background='white'; this.transform='scale(1)'" onmouseover="this.style.background='#ffe6d5'; this.style.transform='scale(1.05)'" style="display: inline-block; background: white; color: #ff9a6b; padding: 12px 28px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: clamp(1rem, 3vw, 1.1rem); transition: all 0.3s;">👉 Группа ВКонтакте </a></section>
+<!-- Полезная информация -->
+
+<section style="background: #fff; padding: 25px; border-radius: 10px; margin-bottom: 35px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+<h2 style="color: #2c3e50; margin-top: 0; margin-bottom: 18px; font-size: 1.6rem;">Полезная информация для покупателей</h2>
+
+<p style="margin-bottom: 18px; font-size: 1rem;">Перед оформлением заказа рекомендуем ознакомиться с подробной информацией:</p>
+
+<ul style="list-style: none; padding: 0;">
+	<li style="margin-bottom: 14px; font-size: 0.95rem;"><strong>Публичная оферта</strong> (условия покупки, права и обязанности сторон): <a href="https://mini-city.ru/pages/oferta" style="color: #e67e22; text-decoration: none;">https://mini-city.ru/pages/oferta</a></li>
+	<li style="margin-bottom: 14px; font-size: 0.95rem;"><strong>Информация об оплате</strong> (доступные способы, порядок расчётов): <a href="https://mini-city.ru/pages/payment" style="color: #e67e22; text-decoration: none;">https://mini-city.ru/pages/payment</a></li>
+	<li style="margin-bottom: 14px; font-size: 0.95rem;"><strong>Информация о доставке</strong> (сроки, стоимость, регионы): <a href="https://mini-city.ru/pages/shipping" style="color: #e67e22; text-decoration: none;">https://mini-city.ru/pages/shipping</a></li>
+</ul>
+</section>
+<!-- Блок FAQ -->
+
+<section style="background: #fff; padding: 25px; border-radius: 10px; margin-bottom: 35px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+<h2 style="color: #2c3e50; text-align: center; margin-top: 0; margin-bottom: 22px; font-size: 1.6rem;">Часто задаваемые вопросы</h2>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px;">
+<div>
+<h3 style="color: #e67e22; margin-top: 0; font-size: 1.2rem;">Как долго ждать заказ?</h3>
+
+<p style="font-size: 0.95rem;">При стандартной покупке &mdash; в день оплаты или на следующий рабочий день. При предзаказе &mdash; 5&ndash;10&nbsp;рабочих дней (максимум до 30&nbsp;дней, вас предупредят заранее).</p>
+</div>
+
+<div>
+<h3 style="color: #e67e22; margin-top: 0; font-size: 1.2rem;">Можно ли отменить заказ?</h3>
+
+<p style="font-size: 0.95rem;">Да, вы можете отменить заказ с полным возвратом предоплаты до воскресенья текущей недели (до 20:00).</p>
+</div>
+
+<div>
+<h3 style="color: #e67e22; margin-top: 0; font-size: 1.2rem;">Какие способы оплаты доступны?</h3>
+
+<p style="font-size: 0.95rem;">Онлайн на сайте, наличными или банковской картой при самовывозе. Подробнее &mdash; в разделе &laquo;Информация об оплате&raquo;.</p>
+</div>
+
+<div>
+<h3 style="color: #e67e22; margin-top: 0; font-size: 1.2rem;">Есть ли гарантия на товары?</h3>
+
+<p style="font-size: 0.95rem;">Да, все товары имеют гарантийный срок. Подробности уточняйте у наших консультантов или в описании товара.</p>
+</div>
+
+<div>
+<h3 style="color: #e67e22; margin-top: 0; font-size: 1.2rem;">Можно ли вернуть товар?</h3>
+
+<p style="font-size: 0.95rem;">Вы можете вернуть товар надлежащего качества в течение 14&nbsp;дней с момента покупки, если он не был в употреблении и сохранены все заводские ярлыки и упаковка.</p>
+</div>
+
+<div>
+<h3 style="color: #e67e22; margin-top: 0; font-size: 1.2rem;">Что делать, если пришёл бракованный товар?</h3>
+
+<p style="font-size: 0.95rem;">Свяжитесь с нами &mdash; мы заменим товар или вернём деньги. Для этого сохраните упаковку и все комплектующие.</p>
+</div>
+</div>
+</section>
+<!-- Призыв к действию -->
+
+<section style="text-align: center; padding: 30px 20px; background: #fff8f0; border-radius: 10px; margin-bottom: 35px;">
+<h2 style="color: #2c3e50; margin-top: 0; margin-bottom: 18px; font-size: 1.6rem;">Начните волшебное путешествие в &laquo;Город Детства&raquo; уже сегодня!</h2>
+
+<p style="font-size: clamp(1rem, 2.5vw, 1.1rem); margin: 15px 0;">Выберите игрушку, которая вдохновит вашего ребёнка на новые открытия!</p>
+<a href="https://mini-city.ru" onmouseout="this.style.background='#e67e22'; this.style.transform='translateY(0)'; this.boxShadow='0 4px 8px rgba(230, 126, 34, 0.2)'" onmouseover="this.style.background='#d35400'; this.style.transform='translateY(-2px); this.boxShadow='0 6px 12px rgba(230, 126, 34, 0.3)'" style="display: inline-block; background: #e67e22; color: white; padding: 14px 36px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: clamp(1rem, 3vw, 1.1rem); transition: all 0.3s; box-shadow: 0 4px 8px rgba(230, 126, 34, 0.2);">Перейти в магазин </a></section>
+<!-- Подвал с дополнительной навигацией -->
+
+
+</div>

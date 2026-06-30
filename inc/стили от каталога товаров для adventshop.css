@@ -1,0 +1,645 @@
+/*   КАТАЛОГ на МОБИЛКАХ*/
+
+
+
+
+
+
+
+
+/* Базовые стили таблицы с максимальным приоритетом */
+html body .table-responsive-scroll-wrap .catalog-view-table {
+  width: 100% !important;
+  border-spacing: 0 !important;
+  border-collapse: separate !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: table !important;
+  table-layout: fixed !important;
+}
+
+html body .table-responsive-scroll-wrap .catalog-view-table tbody {
+  display: table-row-group !important;
+}
+
+html body .table-responsive-scroll-wrap .catalog-view-table tbody tr {
+  display: table-row !important;
+  height: auto !important;
+}
+
+/* Ячейки таблицы — 2 в ряду на всех экранах */
+html body .table-responsive-scroll-wrap .catalog-view-table .cat-cell {
+  padding: 1.25rem 1rem !important;
+  vertical-align: top !important;
+  width: 50% !important; /* 2 колонки везде */
+  box-sizing: border-box !important;
+  display: table-cell !important;
+}
+
+/* Карточки категорий */
+html body .table-responsive-scroll-wrap .catalog-view-table a.inked.ink-dark {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  color: #2d3748 !important;
+  padding: 1.25rem !important;
+  border-radius: 20px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  background: white !important;
+  box-shadow: 0 4px 16px rgba(255, 120, 150, 0.15) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  max-width: 260px !important;
+  margin: 0 auto !important;
+  min-height: 100% !important; /* занимает всю высоту ячейки */
+  justify-content: flex-start !important;
+  border: 2px solid #f0f4ff !important;
+}
+
+/* Эффект при наведении */
+html body .table-responsive-scroll-wrap .catalog-view-table a.inked.ink-dark:hover {
+  box-shadow:
+    0 6px 20px rgba(255, 120, 150, 0.25) !important,
+    0 0 0 2px #ff8c94 !important;
+  transform: translateY(-3px) scale(1.01) !important;
+  border-color: #ff8c94 !important;
+}
+
+/* Контейнер для изображения — белый фон */
+html body .table-responsive-scroll-wrap .catalog-view-table .cat-image-wrap {
+  width: 120px !important;
+  height: 120px !important;
+  margin-bottom: 1.25rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  background: white !important; /* белый фон внутри блока с картинкой */
+  border: 3px solid white !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  transition: all 0.3s ease !important;
+}
+
+html body .table-responsive-scroll-wrap .catalog-view-table a.inked.ink-dark:hover .cat-image-wrap {
+  transform: scale(1.03) rotate(2deg) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Стили для изображений */
+html body .table-responsive-scroll-wrap .catalog-view-table .cat-image-wrap img {
+  max-width: 90% !important;
+  max-height: 90% !important;
+  object-fit: contain !important;
+  transition: transform 0.3s ease !important;
+}
+
+html body .table-responsive-scroll-wrap .catalog-view-table a.inked.ink-dark:hover .cat-image-wrap img {
+  transform: scale(1.08) !important;
+}
+
+/* Текст названия категории — жирный шрифт, 2 строки, скрытие лишнего */
+html body .table-responsive-scroll-wrap .catalog-view-table .cat-name {
+  font-size: 0.9rem !important; /* уменьшен размер шрифта */
+  font-weight: 700 !important; /* жирный шрифт */
+  line-height: 1.4 !important; /* высота строки для 2 строк: 1.4 × 0.9 = ~1.26 rem на строку */
+  color: inherit !important;
+  min-height: 2.52rem !important; /* фиксированная высота для 2 строк (1.26 × 2) */
+  max-height: 2.52rem !important; /* ограничение высоты для 2 строк */
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important; /* ограничиваем до 2 строк */
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important; /* скрываем лишнее */
+  text-overflow: ellipsis !important; /* многоточие в конце */
+  padding: 0 0.75rem !important;
+  margin: 0 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  text-align: center !important;
+  word-wrap: break-word !important; /* перенос длинных слов */
+  hyphens: auto !important; /* автоматический перенос слов */
+}
+
+
+
+
+
+
+
+
+
+
+/* Адаптивность для планшетов и больших мобильных экранов */
+@media (max-width: 768px) {
+  html body .table-responsive-scroll-wrap .catalog-view-table .cat-cell {
+    padding: 1rem 0.75rem !important; /* немного уменьшаем отступы */
+    width: 50% !important; /* сохраняем 2 колонки на планшетах и больших смартфонах */
+  }
+
+  html body .table-responsive-scroll-wrap .catalog-view-table a.inked.ink-dark {
+    max-width: 100% !important;
+    padding: 1.1rem !important; /* небольшой отступ внутри карточки */
+  }
+
+  html body .table-responsive-scroll-wrap .catalog-view-table .cat-image-wrap {
+    width: 110px !important; /* уменьшаем размер блока с картинкой */
+    height: 110px !important;
+  }
+
+  /* Корректировка текста на планшетах — оставляем 2 строки */
+  html body .table-responsive-scroll-wrap .catalog-view-table .cat-name {
+    font-size: 0.92rem !important; /* чуть больше, чем на десктопе */
+    min-height: 2.6rem !important; /* высота для 2 строк */
+    max-height: 2.6rem !important;
+  }
+}
+
+/* Адаптивность для средних мобильных экранов (до 480 px) */
+@media (max-width: 480px) {
+  html body .table-responsive-scroll-wrap .catalog-view-table .cat-cell {
+    padding: 0.8rem 0.5rem !important; /* ещё уменьшаем отступы */
+    width: 50% !important; /* всё ещё 2 колонки */
+  }
+
+  html body .table-responsive-scroll-wrap .catalog-view-table a.inked.ink-dark {
+    padding: 0.9rem !important; /* компактный отступ */
+  }
+
+  html body .table-responsive-scroll-wrap .catalog-view-table .cat-image-wrap {
+    width: 95px !important; /* блок с картинкой чуть меньше */
+    height: 95px !important;
+  }
+
+  /* Текст — 2 строки, шрифт чуть меньше */
+  html body .table-responsive-scroll-wrap .catalog-view-table .cat-name {
+    font-size: 0.88rem !important;
+    min-height: 2.46rem !important; /* 2 строки: 1.23 × 2 */
+    max-height: 2.46rem !important;
+  }
+}
+
+/* Только на очень маленьких экранах (до 360 px) — 1 колонка */
+@media (max-width: 360px) {
+  html body .table-responsive-scroll-wrap .catalog-view-table .cat-cell {
+    width: 100% !important; /* 1 колонка на очень маленьких экранах */
+    display: block !important; /* отключаем табличное отображение */
+    padding: 0.6rem 0.4rem !important; /* минимальные отступы */
+  }
+
+  html body .table-responsive-scroll-wrap .catalog-view-table a.inked.ink-dark {
+    padding: 0.65rem !important; /* минимальный отступ внутри карточки */
+    max-width: none !important; /* снимаем ограничение по ширине */
+  }
+
+  html body .table-responsive-scroll-wrap .catalog-view-table .cat-image-wrap {
+    width: 75px !important; /* маленький размер картинки */
+    height: 75px !important;
+  }
+
+  /* Текст на очень маленьких экранах — 2 строки, минимальный шрифт */
+  html body .table-responsive-scroll-wrap .catalog-view-table .cat-name {
+    font-size: 0.82rem !important; /* самый маленький шрифт */
+    line-height: 1.35 !important; /* компактная высота строки */
+    min-height: 2.2rem !important; /* фиксированная высота для 2 строк: 1.1 × 2 */
+    max-height: 2.2rem !important;
+    padding: 0 0.5rem !important; /* меньше горизонтальных отступов */
+  }
+}
+
+
+
+
+
+
+
+
+/* Тёмная тема + адаптивность для экранов до 480 px */
+
+  html body .table-responsive-scroll-wrap .catalog-view-table a.inked.ink-dark:hover {
+    box-shadow:
+      0 6px 20px rgba(255, 120, 150, 0.15) !important,
+      0 0 0 2px #ff8c94 !important;
+  }
+}
+
+/* Тёмная тема + очень маленькие экраны (до 360 px) */
+
+  html body .table-responsive-scroll-wrap .catalog-view-table a.inked.ink-dark {
+    padding: 0.6rem !important;
+  }
+
+  html body .table-responsive-scroll-wrap .catalog-view-table .cat-image-wrap {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  html body .table-responsive-scroll-wrap .catalog-view-table .cat-name {
+    font-size: 0.8rem !important;
+    min-height: 2rem !important;
+    max-height: 2rem !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*     КАТАЛОГ на ПК         */
+
+
+
+
+
+
+
+
+
+/* Стили карточек категорий — обновлённая цветовая палитра */
+html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-inner-slim {
+  flex: 0 1 calc(25% - 0.75rem); /* 4 колонки без нижней границы ширины */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: #000000; /* Тёмный текст для контраста */
+  padding: 0.8rem 0.6rem 1.1rem;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 4px 16px rgba(255, 165, 0, 0.15); /* Оранжевая тень */
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ADD8FF; /* Светло‑жёлтый фон границы */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+}
+
+/* Эффект при наведении — оранжево‑голубые акценты */
+html body .product-categories.product-categories-slim .product-categories-item-slim:hover .product-categories-item-inner-slim {
+  box-shadow:
+    0 6px 20px rgba(255, 165, 0, 0.25), /* Более насыщенная оранжевая тень */
+    0 0 0 2px #00BFFF; /* Голубой акцентный бордер */
+  transform: translateY(-2px);
+  border-color: #00BFFF; /* Оранжевый цвет границы при наведении */
+  z-index: 10;
+}
+
+/* Стили для изображений — оранжево‑жёлтая палитра */
+html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-image-wrap,
+html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-picture-slim {
+  margin-bottom: 1.9rem; /* Отступ под фото */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Увеличенное фото внутри блока */
+html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-image-wrap img,
+html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-picture-obj-slim {
+  width: 76px; /* 95% от 80 px — увеличенное фото */
+  height: 76px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  filter: brightness(1.07); /* Лёгкое увеличение яркости */
+}
+
+html body .product-categories.product-categories-slim .product-categories-item-slim:hover .product-category-image-wrap img,
+html body .product-categories.product-categories-slim .product-categories-item-slim:hover .product-categories-item-picture-obj-slim {
+  transform: scale(1.07); /* Немного увеличиваем при наведении */
+}
+
+/* Стили для текста названия категории — оранжевый акцент */
+html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-name,
+html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-header-container a.product-categories-header-slim-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #000000; /* Тёмно‑оранжевый цвет текста */
+  min-height: 1.83rem; /* 0.91 × 3 строки — фиксированная высота на 3 строки */
+  max-height: 1.83rem;
+  height: 1.83rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Три строки текста */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 0.9rem;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  word-wrap: break-word;
+  hyphens: auto;
+  text-align: center;
+}
+
+/* Очень большие экраны: 6 колонок */
+@media (min-width: 1600px) {
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-inner-slim {
+    flex: 0 1 calc(16.666% - 0.75rem);
+    padding: 0.9rem 0.7rem 1.2rem;
+  }
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-image-wrap,
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-picture-slim {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 1rem;
+  }
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-image-wrap img,
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-picture-obj-slim {
+    width: 85px;
+    height: 85px;
+  }
+}
+
+/* Большие экраны: 5 колонок (1300–1599 px) */
+@media (max-width: 1599px) and (min-width: 1300px) {
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-inner-slim {
+    flex: 0 1 calc(20% - 0.75rem);
+    padding: 0.85rem 0.65rem 1.1rem;
+  }
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-image-wrap,
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-picture-slim {
+    width: 85px;
+    height: 85px;
+    margin-bottom: 0.95rem;
+  }
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-name,
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-header-container a.product-categories-header-slim-title {
+    font-size: 0.75rem;
+    min-height: 2.85rem;
+    max-height: 2.85rem;
+    height: 2.85rem;
+  }
+}
+
+/* Средние экраны: 4 колонки (800–1299 px) — основной диапазон */
+@media (max-width: 1299px) and (min-width: 800px) {
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-inner-slim {
+    flex: 0 1 calc(25% - 0.75rem);
+    padding: 0.7rem 0.5rem 1rem; /* Немного уменьшили отступы для компактности */
+  }
+
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-image-wrap,
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-picture-slim {
+    width: 78px; /* Немного увеличили размер блока с фото */
+    height: 78px;
+    margin-bottom: 0.85rem; /* Уменьшили отступ под фото для компактности */
+  }
+
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-image-wrap img,
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-picture-obj-slim {
+    width: 74px; /* 95% от 78 px — увеличенное фото */
+    height: 74px;
+  }
+
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-name,
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-header-container a.product-categories-header-slim-title {
+    font-size: 0.68rem; /* Немного уменьшили размер шрифта для компактности */
+    line-height: 1.28;
+    min-height: 1.84rem; /* 0.88 × 3 строки */
+    max-height: 1.84rem;
+    height: 1.84rem;
+    padding: 0 0.35rem;
+    color: #000000; /* Тёмно‑оранжевый цвет текста — согласован с общей палитрой */
+  }
+}
+
+/* Маленькие экраны: 3 колонки (600–799 px) */
+@media (max-width: 799px) and (min-width: 600px) {
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-inner-slim {
+    flex: 0 1 calc(33.333% - 0.75rem);
+    padding: 0.6rem 0.4rem 0.9rem;
+  }
+
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-image-wrap,
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-picture-slim {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 0.8rem;
+  }
+
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-image-wrap img,
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-picture-obj-slim {
+    width: 66px;
+    height: 66px;
+  }
+
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-name,
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-header-container a.product-categories-header-slim-title {
+    font-size: 0.65rem;
+    line-height: 1.25;
+    min-height: 1.65rem; /* 0.82 × 3 строки */
+    max-height: 1.65rem;
+    height: 1.65rem;
+    padding: 0 0.3rem;
+    color: #000000; /* Чуть более светлый оранжевый для маленьких экранов */
+  }
+}
+
+/* Очень маленькие экраны: 2 колонки (400–599 px) */
+@media (max-width: 599px) and (min-width: 400px) {
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-inner-slim {
+    flex: 0 1 calc(50% - 0.75rem);
+    padding: 0.5rem 0.3rem 0.8rem;
+  }
+
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-image-wrap,
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-picture-slim {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 0.7rem;
+  }
+
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-image-wrap img,
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-picture-obj-slim {
+    width: 61px;
+    height: 61px;
+  }
+
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-name,
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-header-container a.product-categories-header-slim-title {
+    font-size: 0.6rem;
+    line-height: 1.2;
+    min-height: 2.2rem; /* 0.73 × 3 строки */
+    max-height: 2.2rem;
+    height: 2.2rem;
+    padding: 0 0.25rem;
+    color: #FFA500; /* Яркий оранжевый для лучшей читаемости на маленьких экранах */
+  }
+}
+
+/* Мобильные устройства: 1 колонка (до 399 px) */
+@media (max-width: 399px) {
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-inner-slim {
+    flex: 0 1 100%;
+    padding: 0.4rem 0.2rem 0.7rem;
+    border-radius: 12px;
+  }
+
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-image-wrap,
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-picture-slim {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.6rem;
+  }
+
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-image-wrap img,
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-picture-obj-slim {
+    width: 56px;
+    height: 56px;
+  }
+
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-name,
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-header-container a.product-categories-header-slim-title {
+    font-size: 0.55rem;
+    line-height: 1.15;
+    min-height: 2rem; /* ~0.67 × 3 строки */
+    max-height: 2rem;
+    height: 2rem;
+    padding: 0 0.2rem;
+    color: #FFB347; /* Светло‑оранжевый для лучшей читаемости */
+  }
+}
+
+/* Отключение анимаций для пользователей, предпочитающих уменьшенное движение */
+@media (prefers-reduced-motion: reduce) {
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-inner-slim,
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-image-wrap,
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-image-wrap img {
+    transition: none !important;
+  }
+}
+
+/* Улучшенная доступность: фокус для клавиатурной навигации — с оранжево‑голубыми акцентами */
+html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-inner-slim:focus-within {
+  box-shadow:
+    0 6px 20px rgba(255, 165, 0, 0.25),
+    0 0 0 3px #4ECDC4; /* Голубой акцентный бордер для фокуса */
+  transform: translateY(-2px);
+  border-color: #FFA500; /* Оранжевый цвет границы */
+  outline: 2px solid #4ECDC4; /* Голубой контур фокуса */
+  outline-offset: 2px;
+}
+
+/* Тёмная тема — адаптация для тёмного режима с оранжево‑жёлтой палитрой */
+@media (prefers-color-scheme: dark) {
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-inner-slim {
+    background: #2d2d2d; /* Тёмно‑серый фон */
+    color: #f0f0f0; /* Светлый текст */
+    border-color: #4a4a4a;
+    box-shadow: 0 4px 16px rgba(255, 165, 0, 0.1); /* Оранжевая тень в тёмной теме */
+  }
+
+  html body .product-categories.product-categories-slim .product-categories-item-slim:hover .product-categories-item-inner-slim {
+    box-shadow:
+      0 6px 20px rgba(255, 165, 0, 0.15),
+      0 0 0 2px #4ECDC4;
+    border-color: #FF8C00; /* Тёмно‑оранжевый в тёмной теме */
+  }
+
+  /* Стили для блока с изображением в тёмной теме */
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-image-wrap {
+    background: linear-gradient(135deg, #B8860B 0%, #DAA520 100%); /* Тёмно‑жёлтый градиент */
+    border-color: #5a5a5a;
+    box-shadow: 0 4px 12px rgba(214, 137, 0, 0.2); /* Тёмно‑оранжевая тень */
+  }
+
+  /* Корректировка текста в тёмной теме — светло‑оранжевый для лучшей читаемости */
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-name,
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-header-container a.product-categories-header-slim-title {
+    color: #FFD166; /* Светло‑жёлтый текст для контраста */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Лёгкая тень для улучшения контраста */
+  }
+
+  /* Улучшение отображения изображений в тёмной теме */
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-image-wrap img,
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-picture-obj-slim {
+    filter: brightness(1.1) contrast(1.05); /* Немного увеличиваем яркость и контраст */
+    transition: filter 0.3s ease;
+  }
+
+  html body .product-categories.product-categories-slim .product-categories-item-slim:hover .product-category-image-wrap img,
+  html body .product-categories.product-categories-slim .product-categories-item-slim:hover .product-categories-item-picture-obj-slim {
+    filter: brightness(1.2) contrast(1.1); /* При наведении дополнительно увеличиваем яркость */
+  }
+
+  /* Стили для фокуса в тёмной теме — более заметный акцент */
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-inner-slim:focus-within {
+    box-shadow:
+      0 6px 20px rgba(255, 165, 0, 0.2),
+      0 0 0 3px #63B3ED; /* Светло‑голубой акцентный бордер */
+    transform: translateY(-2px);
+    border-color: #FFA500;
+    outline: 2px solid #63B3ED;
+    outline-offset: 2px;
+  }
+
+
+
+/* Оптимизация для печати — возвращаем стандартные цвета для лучшей читаемости на бумаге */
+@media print {
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-item-inner-slim {
+    background: white !important;
+    color: black !important;
+    border-color: #ccc !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-name,
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-categories-header-container a.product-categories-header-slim-title {
+    color: black !important;
+  }
+
+  html body .product-categories.product-categories-slim .product-categories-item-slim .product-category-image-wrap {
+    border: 1px solid #ccc !important;
+    background: #B0E0E6 !important;
+  }
+}
+
+
+
+
+
+
+
