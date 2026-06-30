@@ -1,0 +1,347 @@
+/* --- Базовые стили попапа --- */
+.product-popup {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-popup.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px); /* Эффект размытия фона */
+    z-index: 10000;
+    cursor: pointer;
+}
+
+/* --- Контент окна --- */
+.popup-content {
+    position: relative;
+    max-width: 1200px;
+    width: 90%;
+    max-height: calc(100vh - 40px);
+    height: auto;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    transform: translateY(-20px);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Обрезаем всё, что вылезает */
+    box-sizing: border-box;
+}
+
+.product-popup.active .popup-content {
+    transform: translateY(0);
+}
+
+/* Кнопка закрытия */
+.popup-close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 50%;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10001;
+    padding: 0;
+    transition: all 0.2s;
+}
+
+.popup-close-btn:hover {
+    background: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* --- Внутренняя область (скролл) --- */
+.popup-inner {
+    display: grid;
+    grid-template-columns: 45% 1fr; /* Галерея 45%, Инфо 55% */
+    gap: 32px;
+    padding: 32px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto; /* Скролл только внутри контента */
+    overflow-x: hidden;
+}
+
+/* =========================================
+   ГАЛЕРЕЯ (ЛЕВАЯ КОЛОНКА)
+   ========================================= */
+.popup-gallery-section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 0; /* Важно для корректного сжатия */
+}
+
+.gallery-main {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Квадратное фото */
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: #f0f0f0;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+.gallery-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Без обрезки */
+    display: block;
+    transition: transform 0.3s;
+}
+
+/* Блок миниатюр (горизонтальная лента) */
+.gallery-thumbs-wrapper {
+    position: relative;
+    height: 80px; /* Фиксированная высота ленты */
+    display: flex;
+    align-items: center;
+}
+
+.gallery-thumbs-scroll {
+    flex: 1;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+    padding-right: 20px;
+}
+
+.gallery-thumbs-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+.gallery-thumbs-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+.gallery-thumbs-scroll::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.gallery-thumbs-column {
+    display: flex;
+    gap: 12px;
+    padding: 4px 0;
+}
+
+.thumb-btn {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    overflow: hidden;
+    background: #fafafa;
+    padding: 0;
+    transition: all 0.2s;
+}
+
+.thumb-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.thumb-btn.active {
+    border-color: var(--brand-primary, #007bff);
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transform: scale(1.05);
+}
+
+.thumb-btn:hover:not(.active) {
+    background: #f5f5f5;
+    transform: scale(1.02);
+}
+
+/* Стрелки навигации */
+.thumb-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.8);
+    color: #333;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 18px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.thumb-nav-btn.prev { left: 0; }
+.thumb-nav-btn.next { right: 0; }
+
+.thumb-nav-btn:hover { background: #fff; }
+
+/* =========================================
+   ИНФОРМАЦИЯ (ПРАВАЯ КОЛОНКА)
+   ========================================= */
+.popup-info-section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.popup-title {
+    margin: 0 0 8px 0;
+    font-size: 2rem;
+    line-height: 1.2;
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+.popup-meta-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.meta-item {
+    font-size: 0.9rem;
+    color: #666;
+    background: #f4f4f4;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.popup-price-block {
+    margin: 16px 0 24px;
+}
+
+.popup-price {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--brand-primary, #007bff);
+}
+
+/* Бейджи габаритов */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tags-container span {
+    padding: 6px 12px;
+    background: #eee;
+    color: #555;
+    border-radius: 8px;
+    font-size: 0.85rem;
+}
+
+.meta-text {
+    color: #777;
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+}
+
+.badge-warning {
+    display: none; /* Скрыт по умолчанию */
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    background: #fff3e0;
+    border: 1px solid #ffe0b2;
+    border-radius: 10px;
+    color: #d32f2f;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.badge-warning svg {
+    width: 20px;
+    height: 20px;
+}
+
+.popup-description {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    font-size: 1rem;
+    flex-grow: 1;
+}
+
+.btn-cart-large {
+    width: 100%;
+    padding: 18px;
+    background: var(--brand-primary, #007bff);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(0,123,255,0.4);
+}
+
+.btn-cart-large:hover {
+    background: var(--brand-primary-hover, #0056b3);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,123,255,0.5);
+}
+
+/* =========================================
+   АДАПТИВНОСТЬ (МОБИЛЬНЫЕ)
+   ========================================= */
+@media (max-width: 960px) {
+    .popup-inner {
+        grid-template-columns: 1fr; /* Одна колонка */
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .popup-gallery-section,
+    .popup-info-section {
+        width: 100%;
+        order: unset;
+    }
+
+    /* Главное фото на мобильном */
+    .gallery-main {
+        aspect-ratio: unset;
+        height: 300px; /* Фиксируем высоту */
+        margin-bottom: 16px;
+    }
+
+    /* Миниатюры на мобильном: увеличиваем для пальца */
+    .thumb-btn {
+        width: 72px;
+        height: 72px;
+    }
+}
